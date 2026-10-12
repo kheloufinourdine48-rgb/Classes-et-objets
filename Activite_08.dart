@@ -29,3 +29,22 @@ class Roman extends Livre {
     print("Nom du livre : $titre, Écrit par : $auteur, Catégorie : $genre");
   }
 }
+
+void main() {
+  Livre livre1 = Livre("Harry Potter", "J.K. Rowling", 320);
+  Livre livre2 = Livre("Le Tour du monde en 80 jours", "Jules Verne", 280);
+
+  livre1.afficherInfos();
+  print("Nombre de pages : ${livre1.pages}");
+
+  livre2.afficherInfos();
+  print("Nombre de pages : ${livre2.pages}");
+
+  Roman roman1 = Roman("Dracula", "Bram Stoker", 400, "Fantastique");
+  Roman roman2 = Roman("L'Avare", "Molière", 180, "Comédie");
+
+  roman1.affichergenre();
+  roman2.affichergenre();
+
+  Livre.afficherTotalLivres();
+}
