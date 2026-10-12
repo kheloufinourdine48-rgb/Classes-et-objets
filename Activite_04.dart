@@ -24,9 +24,13 @@ class Film extends Media {
   }
 }
 
-void main(){
+void main() {
   List<Media> catalogue = [
     Media("Media Generique"),
     Livre("1984", "George Orwell"),
-    Film("Inception", 148)
+    Film("Inception", 148),
   ];
+  for (var media in catalogue) {
+    media.afficherType();
+  }
+}
