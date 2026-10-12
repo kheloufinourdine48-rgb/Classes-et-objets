@@ -11,3 +11,11 @@ class Point {
     print("Point: x=$_x, y=$_y");
   }
 }
+
+void main() {
+  var pt = Point(2, 5);
+  pt.display();
+
+  pt.move(-1, 3);
+  pt.display();
+}
