@@ -19,11 +19,21 @@ class ServeurAPI implements Connectable {
 class BaseDeDonnees implements Connectable {
   @override
   void connecter(String utilisateur) {
-    print("Connexion de l'utilisateur $utilisateur à la base de données.");
+    print("Connexion  $utilisateur ");
   }
 
   @override
   void deconnecter() {
-    print("Déconnexion de la base de données.");
+    print("Déconnexion .");
+  }
+}
+
+void main() {
+  ServeurAPI serveur = ServeurAPI();
+  BaseDeDonnees base = BaseDeDonnees();
+  List<Connectable> services = [serveur, base];
+  for (var service in services) {
+    service.connecter("Noureddine");
+    service.deconnecter();
   }
 }
