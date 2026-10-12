@@ -23,3 +23,10 @@ class Film extends Media {
     print("Ceci est un Film : $titre, durée : $dureeMinutes minutes.");
   }
 }
+
+void main(){
+  List<Media> catalogue = [
+    Media("Media Generique"),
+    Livre("1984", "George Orwell"),
+    Film("Inception", 148)
+  ];
