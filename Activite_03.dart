@@ -12,3 +12,10 @@ class Compte {
     }
   }
 }
+
+void main() {
+  Compte c1 = Compte("759570");
+  c1.depot(200);
+  print("Numero du compte : ${c1._numeroCompte}");
+  print("Solde du compte : ${c1.solde}");
+}
